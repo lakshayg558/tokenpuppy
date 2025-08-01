@@ -94,7 +94,6 @@ class CrudOperations():
         primary_key_column = SqlEngine().sql_engine("sql/custom_queries/primary_key.sql",([self.tablename],))
         updating_parm = self.dict_statement_update_body(self.input_dict)
         update_value = self.dict_statement_value(self.input_dict,primary_key_value)
-        print(update_value)
         update_statement = f"update {self.tablename} set {updating_parm} where {primary_key_column[0][0]} = %s"
         SqlEngine().sql_engine_string(update_statement, update_value)
 
@@ -106,3 +105,5 @@ class CrudOperations():
         pass
 
 
+S1 = SqlEngine().sql_engine("sql/custom_queries/metadata_tablename.sql",(['sysuser'],))
+print(S1)

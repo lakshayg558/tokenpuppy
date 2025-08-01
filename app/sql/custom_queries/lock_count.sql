@@ -1,0 +1,1 @@
+select COALESCE(Unsuccess_count,'0') from sysuser where UPPER(user_id) = ANY(%s)
