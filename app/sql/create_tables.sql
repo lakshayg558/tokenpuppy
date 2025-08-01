@@ -1,0 +1,24 @@
+CREATE Table IF NOT EXISTS sysuser(
+user_id VARCHAR(20) PRIMARY KEY,
+pass VARCHAR(255) NOT NULL,
+disable VARCHAR(20) DEFAULT 'N',
+default_department VARCHAR(50),
+createdt DATE  DEFAULT CURRENT_TIMESTAMP,
+createby VARCHAR(50) NOT NULL ,
+moddt DATE  DEFAULT CURRENT_TIMESTAMP,
+modby VARCHAR(50)
+)
+
+
+CREATE Table IF NOT EXISTS metadata(
+tablename VARCHAR(20) PRIMARY KEY,
+primarykey_column VARCHAR(255) NOT NULL,
+suffix VARCHAR(10) NOT NULL,
+is_date VARCHAR(10),
+Prefix VARCHAR(50),
+createdt DATE  DEFAULT CURRENT_TIMESTAMP,
+createby VARCHAR(50) NOT NULL ,
+moddt DATE  DEFAULT CURRENT_TIMESTAMP,
+modby VARCHAR(50),
+incremental_flag VARCHAR(20)
+)
