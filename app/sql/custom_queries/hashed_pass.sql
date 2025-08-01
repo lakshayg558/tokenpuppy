@@ -1,0 +1,1 @@
+select pass from sysuser where UPPER(user_id) = ANY(%s)

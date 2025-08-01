@@ -83,22 +83,26 @@ class CrudOperations():
     def dict_statement_value(input_dict,primary_key_value = None):
         column_value = ""
         for key in input_dict.keys():
-            column_value += f" {input_dict[key]},"
+            column_value += f"{input_dict[key]},"
         if primary_key_value != None:
             column_value += primary_key_value
         else:
             column_value
-        return column_value[:-1].split(",")
+        return column_value.split(",")
 
     def update(self,primary_key_value):
         primary_key_column = SqlEngine().sql_engine("sql/custom_queries/primary_key.sql",([self.tablename],))
         updating_parm = self.dict_statement_update_body(self.input_dict)
         update_value = self.dict_statement_value(self.input_dict,primary_key_value)
+        print(update_value)
         update_statement = f"update {self.tablename} set {updating_parm} where {primary_key_column[0][0]} = %s"
         SqlEngine().sql_engine_string(update_statement, update_value)
 
     def insert(self):
         insert_statement_body = f"INSERT INTO {self.tablename} ({self.dict_statement_insert_body(self.input_dict)}) VALUES ({self.dict_statement_insert_value(self.input_dict)})"
         SqlEngine().sql_engine_string(insert_statement_body, self.dict_statement_value(self.input_dict))
+
+    def insert_custom_pk(self):
+        pass
 
 
