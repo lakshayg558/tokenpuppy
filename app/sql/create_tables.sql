@@ -8,8 +8,6 @@ createby VARCHAR(50) NOT NULL ,
 moddt DATE  DEFAULT CURRENT_TIMESTAMP,
 modby VARCHAR(50)
 )
-
-
 CREATE Table IF NOT EXISTS metadata(
 tablename VARCHAR(20) PRIMARY KEY,
 primarykey_column VARCHAR(255) NOT NULL,
@@ -21,4 +19,8 @@ createby VARCHAR(50) NOT NULL ,
 moddt DATE  DEFAULT CURRENT_TIMESTAMP,
 modby VARCHAR(50),
 incremental_flag VARCHAR(20)
+)
+CREATE Table IF NOT EXISTS departments(
+department_name VARCHAR(50 )PRIMARY KEY ,
+system_name VARCHAR(50)
 )

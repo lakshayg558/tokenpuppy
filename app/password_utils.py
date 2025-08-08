@@ -28,6 +28,6 @@ class PassTracking(PasswordSecurity):
             return f"Wrong Password.You have {user_threshold- (self.count+1)} attempts left"
         elif ((self.count >= user_threshold -1 ) and (self.pass_verify() == False)):
             CrudOperations("sysuser", {"Unsuccess_count": self.count + 1, "disable": "Y"}).update(self.user_id)
-            return f"Wrong Password.You are locked because of Wrong password is entered multiple times.Please contact Admin"
+            return f"Wrong Password.You are locked because Wrong password is entered multiple times.Please contact Admin"
 
 

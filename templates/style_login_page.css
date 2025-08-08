@@ -1,0 +1,62 @@
+body
+{
+background-color: white ;
+padding: 0px;
+margin : 0px;
+font-family: 'Open Sans';
+color: #333333;
+}
+
+.navbar
+{
+padding: 8px;
+margin : 0px;
+height : 38px;
+background-color : #00409c;
+color : White;
+font-size : 30px;
+border: 0px black solid;
+}
+
+h2 {
+color : #00409c;
+font-size : 30px;
+}
+
+.form-wrapper {
+  height: 75vh; /* Full height of viewport */
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+}
+
+.login-form {
+  background-color: white;
+  padding: 80px;
+  margin :0;
+  height: 300px;
+  width : 300px;
+  border-radius: 10px;
+  text-align : Center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 300px;   /* Makes it wider */
+  height: 40px;   /* Makes it taller */
+  font-size: 16px; /* Optional: make text bigger */
+}
+button {
+  background-color: #00409c ;   /* background color */
+  color:white ;                /* text color */
+  padding: 12px 20px;          /* top/bottom + left/right space */
+  border: none;                /* removes default border */
+  border-radius: 5px;          /* rounded corners */
+  font-size: 20px;             /* text size */
+  cursor: pointer;             /* pointer on hover */
+  float : Right;
+}
+
+a {
+  text-decoration: none;
+}
